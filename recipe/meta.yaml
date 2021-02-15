@@ -13,16 +13,16 @@ source:
   sha256: 745ca9b22a8de3cda4374be6e2454e549742a3b72ff02c8894c972178192e63d
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-
+    - {{ posix }}zip               # [win]
   host:
     - r-base
   run:
@@ -35,10 +35,11 @@ test:
 
 about:
   home: https://github.com/HenrikBengtsson/profmem
-  license: LGPL (>= 2.1)
+  license: LGPL-2.1-or-later
   summary: A simple and light-weight API for memory profiling of R expressions.  The profiling is built on top of R's built-in memory profiler ('utils::Rprofmem()'), which records every memory allocation done by R (also native code).
   license_family: LGPL
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1
 
 extra:
   recipe-maintainers:
