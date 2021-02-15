@@ -3,13 +3,11 @@ About r-profmem
 
 Home: https://github.com/HenrikBengtsson/profmem
 
-Package license: LGPL (>= 2.1)
+Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-profmem-feedstock/blob/master/LICENSE.txt)
 
 Summary: A simple and light-weight API for memory profiling of R expressions.  The profiling is built on top of R's built-in memory profiler ('utils::Rprofmem()'), which records every memory allocation done by R (also native code).
-
-
 
 Current build status
 ====================
