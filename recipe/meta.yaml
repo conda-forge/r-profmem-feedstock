@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/profmem_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/profmem/profmem_{{ version }}.tar.gz
-  sha256: 745ca9b22a8de3cda4374be6e2454e549742a3b72ff02c8894c972178192e63d
+  sha256: 16efc5f13f4b78919c9d51c07acf62c051e0e3830ae3cc32c596f8daf569c3cb
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
